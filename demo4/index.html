@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        fieldset, legend{
+            all:revert;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Dùng thẻ FORM hay không dùng đều được -->
+        <form class="row" name="frmTourRegister" action="" method="">
+            
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-9">
+                <h3 class="text-center text-uppercase">Đăng kí du lịch</h3>
+            </div>
+            <!-- <div class="col-md-3 text-end mb-2">
+                Email
+            </div>
+            <div class="col-md-9">
+                <input type="email" name="txtEmail" id="txtEmail" required class="form-control mb-2">
+            </div> -->
+            <!-- Hang thu 1 -->
+            <div class="col-md-3 text-end mb-2">
+                <label for="txtFullName" class="form-label">Họ và tên</label>
+            </div>
+            <div class="col-md-9 mb-2">
+                <input type="text" name="txtFullName" id="txtFullName" class="form-control">
+            </div>
+
+            <!-- Hang thu 2 -->
+            <div class="col-md-3 text-end mb-2">
+                <label for="txtAddress" class="form-label">Địa chỉ</label>
+            </div>
+            <div class="col-md-9 mb-2">
+                <input type="text" name="txtAddress" id="txtAddress" class="form-control">
+            </div>
+
+            <!-- Hang thu 3 -->
+            <div class="col-md-3 text-end mb-2">
+                <label for="txtPhone" class="form-label">Điện thoại</label>
+            </div>
+            <div class="col-md-9 mb-2">
+                <input type="tel" name="txtPhone" id="txtPhone" class="form-control">
+            </div>
+
+            <!-- Hang thu 4 -->
+            <div class="col-md-3 text-end mb-2">
+                <label for="txtGuestType" class="form-label">Khách Việt Nam</label>
+            </div>
+            <div class="col-md-9 mb-2">
+                <input type="checkbox"  name="chkGuestType" id="chkGuestType" class="form-check-input" value="1">
+                <!-- <input type="checkbox" name="chkGuestType"  class="form-check-input" value="1"> -->
+
+            </div>
+
+            <!-- Hang thu 5 -->
+            <div class="col-md-3 text-end mb-2">
+                <label for="txtTour" class="form-label">Chọn Tour</label>
+            </div>
+            <div class="col-md-9 mb-2">
+                <select id="sltTour" name="sltTour"  class="form-select" aria-label="Default select example">
+                    <option selected value="">--- Chọn Tour ---</option>
+                    <option value="1">Hà Nội - Đà Nẵng</option>
+                    <option value="2">Hà Nội - Huế</option>
+                    <option value="3">Hà Nội - Quy Nhơn</option>
+                </select>
+            </div>
+
+            <!-- Hang thu 6-->
+            <div class="col-md-3 text-end mb-2">
+                <label for="txtVehicle" class="form-label">Phương tiện</label>
+            </div>
+            <div class="col-md-9 mb-2 d-flex">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="rdoVehicle" id="rdoVehicle1" value="mb">
+                    <label class="form-check-label" for="rdoVehicle1">
+                        Máy bay
+                    </label>
+                </div>
+                <div class="form-check ms-3">
+                    <input class="form-check-input" type="radio" name="rdoVehicle" id="rdoVehicle2" value="ot">
+                    <label class="form-check-label" for="rdoVehicle2">
+                        Ô tô
+                    </label>
+                </div>
+            </div>
+
+             <!-- Hang thu 7-->
+             <div class="col-md-3 mb-2">
+                
+            </div>
+
+            <div class="col-md-9 mb-2">
+                <fieldset class="form-group border p-3">
+                    <legend class="w-auto px-2">Số lượng đoàn khách:</legend>
+                    <label for="txtAdult">Người lớn</label>
+                    <input type="text" name="txtAdult" id="txtAdult">
+                    <label for="txtChildren">Trẻ em</label>
+                    <input type="text" name="txtChildren" id="txtChildren">
+                </fieldset>
+            </div>
+
+            <!-- Hang thu 8-->
+            <div class="col-md-3 mb-2 text-end">
+                <label for="txtNotes">Ghi chú thêm</label>
+            </div>
+
+            <div class="col-md-9 mb-2">
+                <textarea class="form-control" name="txtNotes" id="txtNotes" cols="10"></textarea>
+            </div>
+
+            <!-- Hang thu 9-->
+
+            <div class="col-md-3 mb-2 text-center">
+                
+            </div>
+            <div class="col-md-9 mb-2 text-center">
+                <button class="btn btn-success w-25">Đồng ý</button>
+                <button type="reset">Reset all form</button>
+            </div>
+
+            <div class="col-md-12 mb-2">
+                <span class="notification"></span>
+            </div>
+            
+            
+        </form>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
+    <!-- <script>
+        let checkGuestType = document.getElementById('chkGuestType');
+        if(checkGuestType.checked){
+            alert(checkGuestType.value);
+        }
+    </script> -->
+</body>
+
+</html>
